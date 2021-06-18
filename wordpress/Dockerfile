@@ -1,6 +1,9 @@
-FROM wordpress
-MAINTAINER Sander <mail@sandervanvugt.nl>
+FROM mariadb
+MAINTAINER Khodam Eshgh
 
-# Add repo file
+# add repo file 
 ADD ./hosts /tmp/
+# add env var
+ENV MYSQL_ROOT_PASSWORD=password
+ENV MYSQL_DATABASE=mydb
 
